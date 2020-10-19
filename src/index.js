@@ -110,18 +110,18 @@ export default class RNPickerSelect extends PureComponent {
         };
     }
 
-    static getDerivedStateFromProps(nextProps, prevState) {
+    static getDerivedStateFromProps(nextProps) {
         const newItems = RNPickerSelect.handlePlaceholder({
-            placeholder: nextProps.placeholder
+            placeholder: nextProps.placeholder,
         }).concat(nextProps.items);
-        const { selectedItem, idx } = RNPickerSelect.getSelectedItem({
+        const { selectedItem } = RNPickerSelect.getSelectedItem({
             items: newItems,
             key: nextProps.itemKey,
-            value: nextProps.value
+            value: nextProps.value,
         });
         return {
             items: newItems,
-            selectedItem: selectedItem
+            selectedItem,
         };
     }
 
