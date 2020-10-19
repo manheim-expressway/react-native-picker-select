@@ -37,7 +37,7 @@ export interface PickerStyle {
     inputAndroidContainer?: ViewStyle;
     inputIOS?: TextStyle;
     inputIOSContainer?: ViewStyle;
-    inputWeb?: ViewStyle;
+    inputWeb?: TextStyle;
     modalViewBottom?: ViewStyle;
     modalViewMiddle?: ViewStyle;
     modalViewTop?: ViewStyle;
@@ -72,6 +72,7 @@ export interface PickerSelectProps {
     children?: React.ReactNode;
     onOpen?: () => void;
     useNativeAndroidPickerStyle?: boolean;
+    fixAndroidTouchableBug?: boolean;
     doneText?: string;
     onDonePress?: () => void;
     onUpArrow?: () => void;
